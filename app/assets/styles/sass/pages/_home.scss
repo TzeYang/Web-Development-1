@@ -1,0 +1,57 @@
+.section-featured {
+  background-color: $color-tertiary;
+  padding: 12rem 0 15rem 0;
+}
+
+.section-design-philosophy {
+  background-color: $color-primary;
+  padding: 25rem 0 15rem 0;
+  overflow: hidden;
+}
+
+.section-quality {
+  background-color: $color-tertiary;
+  padding: 15rem 0 15rem 0;
+  overflow: hidden;
+}
+
+.section-press {
+  background-color: $color-primary;
+  padding: 15rem 0 15rem 0;
+  overflow: hidden;
+}
+
+.section-quote {
+  background-color: $color-primary;
+  padding: 25rem 0 15rem 0;
+}
+
+.section-belief {
+  background-color: $color-tertiary;
+  padding: 15rem 0 15rem 0;
+  position: relative;
+  z-index: 10;
+  &::after {
+    content: "";
+    background-color: $color-primary;
+    padding: 15rem 0 15rem 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70%;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.section-belief--2 {
+  background-color: $color-primary;
+  padding: 0rem 0 15rem 0;
+}
+
+.section-locate-us,
+.section-login,
+.section-furniture {
+  background-color: $color-tertiary;
+  padding: 15rem 0 15rem 0;
+}

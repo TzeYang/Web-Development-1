@@ -1,0 +1,28 @@
+.btn {
+  &:link,
+  &:visited {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $color-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border: 1px solid $color-secondary;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease-out;
+    @include respond(tab-port) {
+      font-size: 0.8rem;
+    }
+    @include respond(tab-landsmall) {
+      font-size: 0.7rem;
+    }
+  }
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+  &:active {
+    background-color: transparent;
+    color: $color-secondary;
+  }
+}

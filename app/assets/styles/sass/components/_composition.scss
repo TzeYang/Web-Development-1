@@ -1,0 +1,222 @@
+.composition__photo--1-background {
+  height: 18rem;
+  position: relative;
+  top: 18rem;
+  overflow: hidden;
+  @include respond(tab-port) {
+    top: 14rem;
+  }
+  @include respond(tab-landsmall) {
+    top: 12rem;
+  }
+  @include respond(phone) {
+    top: 12rem;
+  }
+  @include respond(phone-large) {
+    top: 9rem;
+  }
+}
+
+.composition__photo--2-background {
+  height: 40rem;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  @include respond(tab-landsmall) {
+    height: 29rem;
+  }
+  @include respond(phone) {
+    height: 24rem;
+  }
+  @include respond(phone-large) {
+    height: 20rem;
+  }
+}
+
+.composition__photo--3-background {
+  height: 24rem;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+}
+.composition__photo {
+  width: 100%;
+  opacity: 0;
+  transform: translate(-50px, 50px);
+  transition: all 0.8s ease;
+  &--is-showing {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  &--1 {
+    position: relative;
+    top: 0;
+    &-slide {
+      transform: translateX(100%);
+    }
+  }
+  &--1-2 {
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    &-slide {
+      transform: translateX(0);
+    }
+  }
+  &--2 {
+    &-slide {
+      transform: translateX(100%);
+    }
+  }
+  &--2-2 {
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    &-slide {
+      transform: translateX(0);
+    }
+  }
+  &--3 {
+    position: relative;
+    top: 4rem;
+    &-slide {
+      transform: translateX(100%);
+    }
+  }
+  &--3-2 {
+    position: absolute;
+    top: 4rem;
+    transform: translateX(-100%);
+    &-slide {
+      transform: translateX(0);
+    }
+  }
+  &-span {
+    display: inline-block;
+    position: relative;
+    top: 7rem;
+    left: -7rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $color-secondary;
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: opacity 0s, 2s;
+    @include respond(tab-landsmall) {
+      font-size: 0.7rem;
+      left: -6rem;
+    }
+    @include respond(phone) {
+      font-size: 0.4rem;
+      left: -6rem;
+    }
+    @include respond(phone-large) {
+      font-size: 0.3rem;
+      left: -6rem;
+    }
+    &--is-showing {
+      opacity: 1;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.number-box {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  // &--span {
+  //   position: absolute;
+  //   color: $color-white;
+  // }
+}
+
+.number-box__arrow {
+  cursor: pointer;
+  height: 1.3rem;
+  &-right {
+    position: absolute;
+    left: 0.5rem;
+  }
+  &-left {
+    position: absolute;
+    right: 0.5rem;
+  }
+}
+
+.composition-2 {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  &__photo {
+    position: absolute;
+    width: 42%;
+    outline-offset: 0.5rem;
+    opacity: 0;
+    transform: translate(50px, 50px);
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+    &--is-showing {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &-1 {
+      left: 23rem;
+      top: -5rem;
+      z-index: 10;
+      @include respond(tab-landsmall) {
+        left: 23rem;
+        top: 7rem;
+        width: 45%;
+      }
+      @include respond(phone) {
+        left: 20rem;
+        top: 4rem;
+        width: 45%;
+      }
+    }
+    &-2 {
+      left: 10rem;
+      top: 2rem;
+      @include respond(tab-landsmall) {
+        left: 3rem;
+        top: -2rem;
+        width: 45%;
+      }
+      @include respond(phone) {
+        left: 3rem;
+        top: -2rem;
+        width: 45%;
+      }
+    }
+    &-3 {
+      top: 8rem;
+      left: 35rem;
+      @include respond(tab-port) {
+        top: 7rem;
+        left: 31rem;
+      }
+      @include respond(tab-landsmall) {
+        left: 23rem;
+        top: -7rem;
+        width: 33%;
+      }
+      @include respond(phone) {
+        left: 20rem;
+        top: -7rem;
+        width: 33%;
+      }
+    }
+    &:hover {
+      outline: 0.5rem solid $color-secondary;
+      transform: scale(1.05);
+      z-index: 20;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}

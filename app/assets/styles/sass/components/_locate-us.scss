@@ -1,0 +1,33 @@
+.locate-us--title-container {
+  display: flex;
+  justify-content: flex-end;
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+
+.locate-us--paragraph-container {
+  display: flex;
+  justify-content: flex-end;
+  &--left {
+    transform: translateX(-2.9rem);
+    @include respond(tab-port) {
+      transform: translateX(-2.2rem);
+    }
+    @include respond(phone) {
+      transform: translateX(-1.8rem);
+    }
+  }
+  &--right {
+    transform: translateX(3.1rem);
+    @include respond(tab-port) {
+      transform: translateX(3rem);
+    }
+    @include respond(tab-landsmall) {
+      transform: translateX(2.7rem);
+    }
+    @include respond(phone) {
+      transform: translateX(2.3rem);
+    }
+  }
+}

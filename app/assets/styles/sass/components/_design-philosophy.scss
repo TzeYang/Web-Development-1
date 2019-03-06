@@ -1,0 +1,37 @@
+.design-philosophy {
+  &--text-box {
+    margin-top: 4rem;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  height: 101%;
+  top: -0.8%;
+  visibility: hidden;
+  @include respond(tab-land) {
+    visibility: visible;
+  }
+  @include respond(tab-landsmall) {
+    visibility: visible;
+    height: 100%;
+  }
+  @include respond(phone) {
+    visibility: visible;
+    height: 100%;
+  }
+  &--is-showing {
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+    animation: stroke 0.9s ease-in-out forwards;
+    visibility: visible;
+  }
+}

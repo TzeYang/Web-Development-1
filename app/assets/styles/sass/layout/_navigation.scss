@@ -1,0 +1,93 @@
+.navigation {
+  position: fixed;
+  z-index: 3000;
+  text-align: center;
+  right: 0;
+  &-box {
+    position: relative;
+    width: 8rem;
+    height: 10rem;
+    background-color: $color-tertiary;
+    float: left;
+  }
+  &__icon-box {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -35%);
+    cursor: pointer;
+  }
+  &__menu {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+  &__icon-bar-1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.5rem;
+    height: 2px;
+    background-color: $color-white;
+    position: relative;
+    transition: all 0.4s ease-out;
+    &--close-x {
+      transform: rotate(-45deg);
+    }
+  }
+  &__icon-bar-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.5rem;
+    height: 2px;
+    background-color: $color-white;
+    position: relative;
+    top: 0.8rem;
+    transition: all 0.4s ease-out;
+    &--close-x {
+      transform: translateY(-10px) rotate(45deg);
+    }
+  }
+  &__nav {
+    height: 100vh;
+    background-color: $color-secondary;
+    width: 0;
+    float: left;
+    visibility: hidden;
+    transition: all 0.5s 0.2s ease-out;
+    &--is-showing {
+      visibility: visible;
+      width: 25rem;
+    }
+  }
+  &__list {
+    width: 25rem;
+    list-style: none;
+    padding: 8rem 6rem 0 6rem;
+  }
+  &__item {
+    display: block;
+    border-bottom: 0.1px solid $color-white;
+    padding: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      transition: color 0.2s;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
